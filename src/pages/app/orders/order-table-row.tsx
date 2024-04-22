@@ -4,9 +4,18 @@ import { TableCell, TableRow } from "@/components/ui/table";
 import { ArrowRight, Search, X } from "lucide-react";
 import { OrderDatails } from "./order-details";
 
+export interface OrderTableRowsProps {
+    order: {
+        orderId: string;
+        createdAt: Date;
+        status: "pending" | "canceled" | "processing" | "delivering" | "delivered";
+        customerName: string;
+        total: number;
+    }
+}
 
 
-export function OrderTableRow() {
+export function OrderTableRow({order}: OrderTableRowsProps) {
     return (
         <TableRow>
             <TableCell>
@@ -22,7 +31,7 @@ export function OrderTableRow() {
             </TableCell>
 
             <TableCell className="font-mono text-sm font-medium">
-                821542s1sf1d1fd
+                {order.orderId}
             </TableCell>
 
             <TableCell className="text-muted-foreground">
