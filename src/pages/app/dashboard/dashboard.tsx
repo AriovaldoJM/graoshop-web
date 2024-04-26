@@ -5,8 +5,11 @@ import { DayOrdesAmountCard } from './day-orders-amount-card'
 import { MonthCanceledOrdesAmountCard } from './month-canceled-ordes-amount-card'
 import { RevenueCharts } from './revenue-chart'
 import { PopularProductsCharts } from './popular-products-chart'
+import { useQuery } from '@tanstack/react-query'
+import { getDayOrdersAmount } from '@/api/get-day-orders-amont'
 
 export function Dashboard(){
+
     return (
         <>
             <Helmet title="Dashboard"/>
