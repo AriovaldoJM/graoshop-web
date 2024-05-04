@@ -40,7 +40,7 @@ export function SignIn(){
                 }
             })
         }catch{
-            toast.error('Email invalido')
+            toast.error('Credenciais inválidas.')
         }
     }
 
